@@ -1,6 +1,9 @@
-# Misilelab license v1.6
+# Misilelab video license v1.0 (from Misilelab license v1.6)
 
-Author information : Base repository by MisileLaboratory
+Videos by MisileLaboratory  
+
+## Music sources
+Music source in [this file](./Copyrights.md)
 
 ## derivative works condition
 

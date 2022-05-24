@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "videos"
+version = "0.1.0"
+description = "Videos in misilelab"
+authors = ["MisileLaboratory"]
+license = "Misilelab video license v1.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.4"
+manim = "^0.15.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

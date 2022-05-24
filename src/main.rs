@@ -1,3 +1,7 @@
+use bevy::prelude::*;
+
 fn main() {
-  println!("hello, miku!")
+  App::new()
+  .add_plugins(DefaultPlugins)
+  .run();
 }
