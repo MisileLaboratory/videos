@@ -8,8 +8,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: install rust nightly
-      run: rustup toolchain install nightly
+    - name: rustup install
+      run: | 
+        rustup toolchain install nightly
+        rustup update
+        rustup default nightly
     - name: install cargo deny
       run: cargo install --locked cargo-deny
     - name: check advisories
