@@ -20,6 +20,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: rustup install
+      run: | 
+        rustup toolchain install nightly
+        rustup update
+        rustup default nightly
     - name: add cargo clippy
       run: rustup component add clippy
     - name: test
