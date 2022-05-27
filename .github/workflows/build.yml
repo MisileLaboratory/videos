@@ -21,6 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: dependency check
+      if: runner.os == 'Linux'
       run: sudo apt install g++ pkg-config libx11-dev libasound2-dev libudev-dev
     - name: rustup install
       run: | 
