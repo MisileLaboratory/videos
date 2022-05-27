@@ -8,8 +8,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      name: dependency check
-      run: sudo apt install g++ pkg-config libx11-dev libasound2-dev libudev-dev
+    - name: dependency check
+      if: runner.os == 'Linux'
+      run: sudo apt install g++ pkg-config libx11-dev libasound2-dev libudev-dev lld
+    - name: dependency check
+      if: runner.os == 'windows'
+      run: | 
+        cargo install -f cargo-binutils
+        rustup component add llvm-tools-preview
+    - name: dependency check
+      if: runner.os == 'macos'
+      run: brew update && brew install michaeleisel/zld/zld && brew upgrade
     - name: rustup install
       run: | 
         rustup toolchain install nightly
