@@ -8,8 +8,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      name: dependency check
-      run: sudo apt install g++ pkg-config libx11-dev libasound2-dev libudev-dev
+    - name: dependency check
+      run: sudo apt install g++ pkg-config libx11-dev libasound2-dev libudev-dev lld
     - name: rustup install
       run: | 
         rustup toolchain install nightly
